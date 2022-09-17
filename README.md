@@ -7,7 +7,7 @@
 ```
 frame1
 ```
-![画像1](./Pandas-Exercises6-1.png)
+![画像1](./image01.png)
 
 <br>
 
@@ -15,7 +15,7 @@ frame1
 ```
 frame2
 ```
-![画像2](./Pandas-Exercises6-2.png)
+![画像2](./image02.png)
 
 <br>
 
@@ -23,7 +23,7 @@ frame2
 ```
 frame3
 ```
-![画像3](./Pandas-Exercises6-3.png)
+![画像3](./image03.png)
 
 <br>
 
@@ -31,7 +31,7 @@ frame3
 ```
 frame4
 ```
-![画像4](./Pandas-Exercises6-4.png)
+![画像4](./image04.png)
 
 <br>
 
@@ -39,7 +39,7 @@ frame4
 ```
 frame2 = pd.merge(frame2, frame1, how='left', on='取引ID')
 ```
-![画像5](./Pandas-Exercises6-5.png)
+![画像5](./image05.png)
 
 <br>
 
@@ -47,7 +47,7 @@ frame2 = pd.merge(frame2, frame1, how='left', on='取引ID')
 ```
 frame2 = pd.merge(frame2, frame4, how='left', on='顧客ID')
 ```
-![画像6](./Pandas-Exercises6-6.png)
+![画像6](./image06.png)
 
 <br>
 
@@ -55,7 +55,7 @@ frame2 = pd.merge(frame2, frame4, how='left', on='顧客ID')
 ```
 frame2 = pd.merge(frame2, frame3, how='left', on='商品ID')
 ```
-![画像7](./Pandas-Exercises6-7.png)
+![画像7](./image07.png)
 
 <br>
 
@@ -63,7 +63,7 @@ frame2 = pd.merge(frame2, frame3, how='left', on='商品ID')
 ```
 frame2.set_index(['取引ID', '商品ID'])
 ```
-![画像8](./Pandas-Exercises6-8.png)
+![画像8](./image08.png)
 
 <br>
 
@@ -71,7 +71,7 @@ frame2.set_index(['取引ID', '商品ID'])
 ```
 frame2.pivot_table(values='取引量', index='商品名', columns='取引日', aggfunc=np.sum)
 ```
-![画像9](./Pandas-Exercises6-9.png)
+![画像9](./image09.png)
 
 <br>
 
@@ -79,16 +79,22 @@ frame2.pivot_table(values='取引量', index='商品名', columns='取引日', a
 ```
 frame2.pivot_table(values='取引量', index='取引日', columns='商品名', aggfunc=np.sum)
 ```
-![画像10](./Pandas-Exercises6-10.png)
+![画像10](./image10.png)
+
+<br>
 
 ## 列(取引日)、行(顧客名)のグループで取引量を集計(集計関数は合計を使用)
 ```
 frame2.pivot_table(values='取引量', index='顧客名', columns='取引日', aggfunc=np.sum)
 ```
-![画像11](./Pandas-Exercises6-11.png)
+![画像11](./image11.png)
+
+<br>
 
 ## 列(顧客名)、行(取引日)のグループで取引量を集計(集計関数は合計を使用)
 ```
 frame2.pivot_table(values='取引量', index='取引日', columns='顧客名', aggfunc=np.sum)
 ```
-![画像12](./Pandas-Exercises6-12.png)
+![画像12](./image12.png)
+
+<br>
